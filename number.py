@@ -74,7 +74,7 @@ INVERTER_NUMBER_DESCRIPTIONS: tuple[HuaweiSolarNumberEntityDescription, ...] = (
     ),
     HuaweiSolarNumberEntityDescription(
         key=rn.ACTIVE_POWER_FIXED_VALUE_DERATING,
-        static_maximum_key=rn.P_MAX,
+        native_max_value=15000,
         native_step=1,
         native_min_value=0,
         icon="mdi:transmission-tower-off",
