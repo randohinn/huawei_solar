@@ -255,8 +255,8 @@ async def _validate_power_value(power: Any, bridge: HuaweiSolarBridge, max_value
         await bridge.client.get(max_value_key, bridge.slave_id)
     ).value
 
-    if not power <= maximum_active_power:
-        raise ValueError(f"Power cannot be more than {maximum_active_power}W")
+    if not power <= 15000:
+        raise ValueError(f"Power cannot be more than 15000W")
 
     return power
 
